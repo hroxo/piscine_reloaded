@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hroxo <hroxo@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 12:09:33 by hroxo             #+#    #+#             */
-/*   Updated: 2025/10/07 12:37:20 by hroxo            ###   ########.fr       */
+/*   Created: 2025/10/07 13:06:06 by hroxo             #+#    #+#             */
+/*   Updated: 2025/10/07 13:13:36 by hroxo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+int	ft_iterative_factorial(int nb)
 {
-	char	c;
+	int	output;
 
-	c = 'a';
-	while (c <= 'z')
+	output = 1;
+	if (nb < 0 || nb > 12)
+		return (0);
+	while (nb > 0)
 	{
-		ft_putchar(c);
-		c++;
+		output *= nb;
+		nb--;
 	}
+	return (output);
 }
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int	main(int argc, char **argv)
+{
+	(void) argc;
+	printf("%i", ft_iterative_factorial(atoi(argv[1])));
+	return (0);
+}
+*/

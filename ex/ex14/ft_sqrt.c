@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hroxo <hroxo@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 12:09:33 by hroxo             #+#    #+#             */
-/*   Updated: 2025/10/07 12:37:20 by hroxo            ###   ########.fr       */
+/*   Created: 2025/10/07 13:24:13 by hroxo             #+#    #+#             */
+/*   Updated: 2025/10/07 13:30:50 by hroxo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+int	ft_sqrt(int nb)
 {
-	char	c;
+	int	i;
 
-	c = 'a';
-	while (c <= 'z')
+	i = 0;
+	if (nb < 0)
+		return (0);
+	while (i * i <= nb)
 	{
-		ft_putchar(c);
-		c++;
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
+	return (0);
 }
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv)
+{
+	(void) argc;
+	printf("%i", ft_sqrt(atof(argv[1])));
+	return (0);
+}
+*/

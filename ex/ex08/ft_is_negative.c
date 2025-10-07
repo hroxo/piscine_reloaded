@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hroxo <hroxo@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 12:09:33 by hroxo             #+#    #+#             */
-/*   Updated: 2025/10/07 12:37:20 by hroxo            ###   ########.fr       */
+/*   Created: 2025/10/07 12:37:54 by hroxo             #+#    #+#             */
+/*   Updated: 2025/10/07 12:40:24 by hroxo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+void	ft_is_negative(int n)
 {
-	char	c;
-
-	c = 'a';
-	while (c <= 'z')
-	{
-		ft_putchar(c);
-		c++;
-	}
+	if (n < 0)
+		ft_putchar('N');
+	else
+		ft_putchar('P');
 }

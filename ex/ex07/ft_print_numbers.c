@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hroxo <hroxo@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 12:09:33 by hroxo             #+#    #+#             */
-/*   Updated: 2025/10/07 12:37:20 by hroxo            ###   ########.fr       */
+/*   Created: 2025/10/07 12:35:26 by hroxo             #+#    #+#             */
+/*   Updated: 2025/10/07 12:37:00 by hroxo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
 	char	c;
 
-	c = 'a';
-	while (c <= 'z')
+	c = '0';
+	while (c <= '9')
 	{
 		ft_putchar(c);
 		c++;

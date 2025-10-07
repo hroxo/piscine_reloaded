@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hroxo <hroxo@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 12:09:33 by hroxo             #+#    #+#             */
-/*   Updated: 2025/10/07 12:37:20 by hroxo            ###   ########.fr       */
+/*   Created: 2025/10/07 12:56:32 by hroxo             #+#    #+#             */
+/*   Updated: 2025/10/07 13:01:26 by hroxo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+void ft_swap(int *a, int *b)
 {
-	char	c;
+	int temp;
 
-	c = 'a';
-	while (c <= 'z')
-	{
-		ft_putchar(c);
-		c++;
-	}
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	int a = 3;
+	int b = 5;
+
+	printf("Antes do swap\na %i b %i\n", a, b);
+	ft_swap(&a, &b);
+	printf("Depois do swap\na %i b %i\n", a, b);
+	return (0);
+}
+*/

@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   util.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hroxo <hroxo@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 09:28:34 by hroxo             #+#    #+#             */
-/*   Updated: 2025/10/08 09:33:27 by hroxo            ###   ########.fr       */
+/*   Created: 2025/10/08 11:35:51 by hroxo             #+#    #+#             */
+/*   Updated: 2025/10/08 12:17:28 by hroxo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
+#ifndef UTIL_H
+# define UTIL_H
 
-# define ABS(Value) (((Value) < 0) ? -(Value) : (Value))
+# define FEW_ARGS "File name missing.\n"
+# define MANY_ARGS "Too many arguments.\n"
+# define READ_ERROR "Cannot read file.\n"
+
+# include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
+
+size_t	ft_strlen(char *src);
+void	print_file(int fd);
 
 #endif

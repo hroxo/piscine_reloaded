@@ -1,18 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hroxo <hroxo@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 09:28:34 by hroxo             #+#    #+#             */
-/*   Updated: 2025/10/08 09:33:27 by hroxo            ###   ########.fr       */
+/*   Created: 2025/10/08 11:37:20 by hroxo             #+#    #+#             */
+/*   Updated: 2025/10/08 12:22:39 by hroxo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
+#include "../includes/util.h"
+#include <unistd.h>
 
-# define ABS(Value) (((Value) < 0) ? -(Value) : (Value))
+size_t	ft_strlen(char *src)
+{
+	size_t	len;
 
-#endif
+	len = 0;
+	while (src[len])
+		len++;
+	return (len);
+}
+
+void	print_file(int fd)
+{
+	int		f_r;
+	char	c;
+
+	f_r = read(fd, &c, 1);
+	while (f_r > 0)
+	{
+		write(1, &c, 1);
+		f_r = read(fd, &c, 1);
+	}
+}

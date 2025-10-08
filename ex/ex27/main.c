@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hroxo <hroxo@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 09:28:34 by hroxo             #+#    #+#             */
-/*   Updated: 2025/10/08 09:33:27 by hroxo            ###   ########.fr       */
+/*   Created: 2025/10/08 11:32:25 by hroxo             #+#    #+#             */
+/*   Updated: 2025/10/08 12:18:47 by hroxo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
+#include "includes/util.h"
 
-# define ABS(Value) (((Value) < 0) ? -(Value) : (Value))
+int	main(int argc, char **argv)
+{
+	int	fd;
 
-#endif
+	if (argc != 2)
+	{
+		if (argc > 2)
+			write(1, MANY_ARGS, ft_strlen(MANY_ARGS));
+		else
+			write(1, FEW_ARGS, ft_strlen(FEW_ARGS));
+		return (1);
+	}
+	fd = open(argv[1], O_RDONLY);
+	if (fd < 0)
+	{
+		write(1, READ_ERROR, ft_strlen(READ_ERROR));
+		return (3);
+	}
+	print_file(fd);
+	close(fd);
+	return (0);
+}

@@ -6,7 +6,7 @@
 /*   By: hroxo <hroxo@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 09:15:05 by hroxo             #+#    #+#             */
-/*   Updated: 2025/10/08 09:19:05 by hroxo            ###   ########.fr       */
+/*   Updated: 2025/10/08 15:35:04 by hroxo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ char	*ft_strdup(char *src)
 	char	*output;
 
 	len = ft_strlen(src);
-	output = malloc(len + 1);
+	i = 0;
+	output = malloc((len + 1) * sizeof(char));
 	if (!output)
 		return (NULL);
 	while (src[i])
